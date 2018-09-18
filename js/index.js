@@ -7,6 +7,7 @@ $(document).ready(function(){
         "player10", "player11", "player12",
     ];
 
+    
     var originName=[
         "player1", "player2", "player3",
         "player4", "player5", "player6",
@@ -146,24 +147,27 @@ $(document).ready(function(){
 
     //身份牌点击事件代理
     $("#charator-selector").click(function(){
-        var target=$(event.target);
-        var index;
-        var num=$("#charator-selector img").index(target);
-        if(target.hasClass("active")){
-            //身份数组删除该牌
-            index=playerCharator.indexOf(num);
-            target.removeClass("active");
-            playerCharator.splice(index,index+1);
-        }else{
-            //身份数组添加该牌
-            target.addClass("active");
-            playerCharator.push(num);
+        if(event.target.tagName==="IMG"){
+            var target=$(event.target);
+            var index;
+            var num=$("#charator-selector img").index(target);
+            if(target.hasClass("active")){
+                //身份数组删除该牌
+                index=playerCharator.indexOf(num);
+                target.removeClass("active");
+                playerCharator.splice(index,index+1);
+            }else{
+                //身份数组添加该牌
+                target.addClass("active");
+                playerCharator.push(num);
+            }
+            //滑动条变化
+            $("#peopleNumber").val(playerCharator.length-3);
+            rangeChange();
+            inputChange();
+            startChange();
+            
         }
-        //滑动条变化
-        $("#peopleNumber").val(playerCharator.length-3);
-        inputChange();
-        startChange();
-        rangeChange();
     })  
 
 
@@ -177,9 +181,20 @@ $(document).ready(function(){
     })
 
     $("#nameReset").click(function(){
-        $("#playerName").find("input").each(function(index,ele){
-            ele.value="";
-        })
-        players=originName.slice(0);
+        var cf = confirm("注意！此操作会清除全部玩家姓名")
+        if(cf){
+            $("#playerName").find("input").each(function(index,ele){
+                ele.value="";
+            })
+            players=originName.slice(0);
+        }
+    })
+
+    
+
+    //游戏开始切页面传参
+    $("#gameStartBtn").click(function(){
+        var url="game.html?players=" + escape(JSON.stringify(players)) + ";playerCharator=" + escape(JSON.stringify(playerCharator));
+        window.location.href=url;
     })
 })

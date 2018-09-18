@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>一夜狼人游戏中</title>
+    <link rel="icon" href="images/title.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+</head>
+<body>
+    <header id="header" class="text-center">
+        <span><span class="charator h4">闭眼</span>的时间剩余<span class="time h1">15</span> 秒</span>
+        <p id="message">全部人请闭眼</p>
+    </header>
+    <div class="container under">
+        <div class="out row text-center">
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>场外卡1</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>场外卡2</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>场外卡3</p>
+            </div>
+        </div>
+        <div class="desk row text-center">
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player1</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player2</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player3</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player4</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player5</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player6</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player7</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player8</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player9</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player10</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player11</p>
+            </div>
+            <div class="card col-4 col-md-3 col-lg-2">
+                <img src="images/back.jpg">
+                <p>Player12</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-btn text-center">
+        <button type="button" class="btn-primary" id="confirm"><img src="images/confirm.png" alt="确定"></button>
+        <button type="button" class="btn-danger" id="reset"><img src="images/cancel.png" alt="取消"></button>
+    </div>
+    
+    <div id="charator-selector">
+        <div class="container text-center">
+            <div>
+                <img src="images/back.jpg">
+            </div>
+            <p>请<span class="name h4">Player1</span>点击卡牌查看自己身份</p>
+            <button type="button" class="btn-primary" disabled id="next">下一位</button>
+        </div>
+    </div>
+    <audio id="voiceAd" src=""></audio>
+    <!--脚本从这里开始-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

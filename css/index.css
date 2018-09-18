@@ -5,7 +5,7 @@
 
 .main-header {
     height: 200px;
-    background: url('images/header.jpg');
+    background: url('../images/header.jpg');
     background-size: cover;
     overflow: hidden;
 }

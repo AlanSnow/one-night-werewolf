@@ -1,0 +1,168 @@
+/*==========背景=========*/
+body{
+    margin-top: 100px;
+    background: rgba(0,0,0,1);
+    margin-bottom: 50px;
+}
+
+/*头部*/
+#header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 4px;
+    background: white;
+    box-shadow: 0 .3rem 1rem rgba(255,255,255,0.4);
+    z-index: 997;
+    display: none;
+}
+
+.time{
+    display: inline-block;
+    width: 3rem;
+}
+
+.header p {
+    display: block;
+    margin-bottom: 0 !important;
+}
+
+.time{
+    color: red;
+}
+
+.charator {
+    color: blue;
+}
+
+/*场外*/
+
+.out {
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.7)
+}
+
+/*场内*/
+.desk {
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    color: white;
+    background: url('../images/desk.jpg');
+    background-size: cover;
+    border-top: .5rem solid rgba(95,47,24,0.8);
+    border-bottom: .5rem solid rgba(95,47,24,0.8);
+    box-shadow: 0 -1rem 3.5rem rgba(255,255,255,0.15),0 1rem 3.5rem rgba(255,255,255,0.15);
+    margin-bottom: 3rem;
+}
+
+.desk .card{
+    display: none;
+}
+
+/*通用*/
+
+.card {
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: 2%;
+    background: transparent;
+}
+
+.desk .card p{
+    background: rgba(95,47,24,0.6);
+    box-shadow: 0 10px 20px rgba(95,47,24,0.6);
+}
+
+.card img{
+    cursor: pointer;
+    width: 100%;
+    border: 3px solid black;
+    box-shadow: 0 3px 28px black;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.card.visable {
+    display: inline-block;
+}
+/*选中的牌变色*/
+
+.card.active {
+    padding: .5%;
+}
+
+.card.active img{
+    pointer-events: auto;
+    border: 3px solid #5e61df;
+}
+
+
+
+/*确认菜单*/
+
+.fixed-btn{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 997;
+    display: none;
+}
+
+.fixed-btn button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: .5rem 2rem;
+    border: .2rem solid rgba(0,0,0,.2);
+    box-shadow: 0 1rem 3rem rgba(255,255,255,.15),0 -1rem 3rem rgba(255,255,255,.15);
+}
+
+
+/*身份选择蒙版*/
+#charator-selector {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    color: white;
+    background: rgba(0,0,0,.8);
+}
+
+#charator-selector .container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+#charator-selector p{
+    margin-top: 1rem;
+}
+/*手机*/
+#charator-selector img{
+    width: 60%;
+}
+
+@media screen and (min-width: 768px){
+    #charator-selector img{
+         width: 250px;
+    }
+
+#next {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    padding-bottom: .5rem;
+    margin: .5rem 2rem;
+    border: .2rem solid rgba(0,0,0,.2);
+    box-shadow: 0 1rem 3rem rgba(255,255,255,.15),0 -1rem 3rem rgba(255,255,255,.15);
+}

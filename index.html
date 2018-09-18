@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>一夜终极狼人助手</title>
+	<link rel="icon" href="images/title.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header class="main-header">
+		<span class="h2 main-title">一夜终极狼人助手</span>
+	</header>
+	<nav class="navigation">
+		<div class="nav-container">
+				<div class="navbar-header text-center">
+					<img class="navbar-toggler" src="images/down.png">
+				</div>
+				<div id="main-menu" class="navbar-collapse">
+					<ul class="nav-list col-sm-10 offset-sm-1">
+						<li class="nav-active"><a href="#quick-start" target="_self">人数设置</a></li>
+						<li><a href="#charator" target="_self">身份选择</a></li>
+						<li><a href="#players" target="_self">玩家姓名</a></li>
+						<li><a href="#game-start" target="_self">开始游戏</a></li>
+						<li><a href="#" target="_self">游戏规则</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div id="quick-start" class="row">
+			<div class="section">
+				<p class="h4">人数设置</p>
+				<strong style="color:red">!!!调整人数后身份牌会恢复为该人数默认设置</strong>
+				<form>
+					<label for="peopleNumber" class="sr-only">人数</label>
+					<p class="h6">游玩人数:<span class="text-center" id="numberSrc">3</span>人,身份牌数量:<span class="text-center" id="cardNumber">6</span>张</p>
+					<input type="range" class="custom-range" id="peopleNumber" name="peopleNumber" min="3" max="12" value="3"step="1">
+				</form>
+			</div>
+		</div>
+		<div id="charator" class="row">
+			<div class="section text-center">
+				<p class="h4 text-left">身份选择</p>
+				<div id="charator-selector">
+					<img class="col-5 col-sm-3 col-md-2" id="doppelganger" src="images/charator/doppelganger.jpg" alt="doppelganger" title="化身幽灵">
+					<img class="col-5 col-sm-3 col-md-2 active" id="werewolf" src="images/charator/werewolf.jpg" alt="werewolf" title="狼人">
+					<img class="col-5 col-sm-3 col-md-2" id="werewolf" src="images/charator/werewolf.jpg" alt="werewolf" title="狼人">
+					<img class="col-5 col-sm-3 col-md-2 active" id="minion" src="images/charator/minion.jpg" alt="minion" title="爪牙">
+					<img class="col-5 col-sm-3 col-md-2 active" id="drunk" src="images/charator/drunk.jpg" alt="drunk" title="酒鬼">
+					<img class="col-5 col-sm-3 col-md-2" id="insomniac" src="images/charator/insomniac.jpg" alt="insomniac" title="失眠者">
+					<img class="col-5 col-sm-3 col-md-2" id="mason" src="images/charator/mason.jpg" alt="mason" title="守夜人">
+					<img class="col-5 col-sm-3 col-md-2" id="mason" src="images/charator/mason.jpg" alt="mason" title="守夜人">
+					<img class="col-5 col-sm-3 col-md-2 active" id="robber" src="images/charator/robber.jpg" alt="robber" title="强盗">
+					<img class="col-5 col-sm-3 col-md-2 active" id="seer" src="images/charator/seer.jpg" alt="seer" title="预言家">
+					<img class="col-5 col-sm-3 col-md-2" id="troublemaker" src="images/charator/troublemaker.jpg" alt="troublemaker" title="捣蛋鬼">
+					<img class="col-5 col-sm-3 col-md-2 active" id="villager" src="images/charator/villager.jpg" alt="villager" title="村民">
+					<img class="col-5 col-sm-3 col-md-2" id="villager" src="images/charator/villager.jpg" alt="villager" title="村民">
+					<img class="col-5 col-sm-3 col-md-2" id="villager" src="images/charator/villager.jpg" alt="villager" title="村民">
+					<img class="col-5 col-sm-3 col-md-2" id="witch" src="images/charator/witch.jpg" alt="witch" title="女巫">
+					<img class="col-5 col-sm-3 col-md-2" id="alpha" src="images/charator/alpha.jpg" alt="alpha" title="阿尔法狼">
+					<img class="col-5 col-sm-3 col-md-2" id="dream" src="images/charator/dream.jpg" alt="dream" title="贪睡狼">
+					<img class="col-5 col-sm-3 col-md-2" id="mystic" src="images/charator/mystic.jpg" alt="mystic" title="狼先知">
+					<img class="col-5 col-sm-3 col-md-2" id="apprentice" src="images/charator/apprentice.jpg" alt="apprentice" title="见习预言家">
+					<img class="col-5 col-sm-3 col-md-2" id="aura" src="images/charator/aura.jpg" alt="aura" title="循迹者">
+					<img class="col-5 col-sm-3 col-md-2" id="curator" src="images/charator/curator.jpg" alt="curator" title="监护人">
+					<img class="col-5 col-sm-3 col-md-2" id="paranormal" src="images/charator/paranormal.jpg" alt="paranormal" title="灵异侦探">
+					<img class="col-5 col-sm-3 col-md-2" id="idiot" src="images/charator/idiot.jpg" alt="idiot" title="村庄白痴">
+					<img class="col-5 col-sm-3 col-md-2" id="revealer" src="images/charator/revealer.jpg" alt="revealer" title="揭秘者">
+					<img class="col-5 col-sm-3 col-md-2" id="sentinel" src="images/charator/sentinel.jpg" alt="sentinel" title="哨兵">	
+				</div>
+			</div>
+		</div>
+		<div id="players" class="row">
+			<div class="section">
+				<p class="h4">玩家姓名</p>
+				<form id="playerName" class="text-center">
+					<div id="player_1" class="col-12 col-md-5 col-lg-3 active">
+						<label for="name_1">Player1:</label>
+						<input type="text" class="form-control" id="name_1" name="name_1" placeholder="Player1">
+					</div>
+					<div id="player_2" class="col-12 col-md-5 col-lg-3  active">
+						<label for="name_1">Player2:</label>
+						<input type="text" class="form-control" id="name_2" name="name_2" placeholder="Player2">
+					</div>
+					<div id="player_3" class="col-12 col-md-5 col-lg-3  active">	
+						<label for="name_3">Player3:</label>
+						<input type="text" class="form-control" id="name_3" name="name_3" placeholder="Player3">
+					</div>
+					<div id="player_4" class="col-12 col-md-5 col-lg-3">
+						<label for="name_4">Player4:</label>
+						<input type="text" class="form-control" id="name_4" name="name_4" placeholder="Player4">
+					</div>
+					<div id="player_5" class="col-12 col-md-5 col-lg-3">
+						<label for="name_5">Player5:</label>
+						<input type="text" class="form-control" id="name_5" name="name_5" placeholder="Player5">
+					</div>
+					<div id="player_6" class="col-12 col-md-5 col-lg-3">
+						<label for="name_6">Player6:</label>
+						<input type="text" class="form-control" id="name_6" name="name_6" placeholder="Player6">
+					</div>
+					<div id="player_7" class="col-12 col-md-5 col-lg-3">
+						<label for="name_7">Player7:</label>
+						<input type="text" class="form-control" id="name_7" name="name_7" placeholder="Player7">
+					</div>
+					<div id="player_8" class="col-12 col-md-5 col-lg-3">
+						<label for="name_8">Player8:</label>
+						<input type="text" class="form-control" id="name_8" name="name_8" placeholder="Player8">
+					</div>
+					<div id="player_9" class="col-12 col-md-5 col-lg-3">
+						<label for="name_9">Player9:</label>
+						<input type="text" class="form-control" id="name_9" name="name_9" placeholder="Player9">
+					</div>
+					<div id="player_10" class="col-12 col-md-5 col-lg-3">
+						<label for="name_10">Player10:</label>
+						<input type="text" class="form-control" id="name_10" name="name_10" placeholder="Player10">
+					</div>
+					<div id="player_11" class="col-12 col-md-5 col-lg-3">
+						<label for="name_11">Player11:</label>
+						<input type="text" class="form-control" id="name_11" name="name_11" placeholder="Player11">
+					</div>
+					<div id="player_12" class="col-12 col-md-5 col-lg-3">
+						<label for="name_12">Player12:</label>
+						<input type="text" class="form-control" id="name_12" name="name_12" placeholder="Player12">
+					</div>
+				</form>
+				<div class="text-center">
+					<button type="button" class="btn btn-primary" id="nameSave">保存</button>
+					<button type="button" class="btn btn-danger"id="nameReset">重置</button>
+				</div>
+			</div>
+		</div>
+		<div id="game-start" class="row">
+			<div class="section">
+				<p class="h4">本轮游戏的身份有：</p>
+					<p id="charatorString">狼人、爪牙、酒鬼、村民、强盗、预言家，共6张牌。</p>
+				<button type="button" class="btn btn-primary btn-lg" id="gameStartBtn">确认开始</button>
+			</div>
+		</div>
+	</div>
+	<a href="#top" target="_self" id="toTop">TOP</a>
+	<!-- 外部脚本 -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/*=========header头部图片文字标题=============*/
+* {
+    transition: all 0.5s ease;
+}
+
+.main-header {
+    height: 200px;
+    background: url('images/header.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main-title {
+    color: white;
+    display: block;
+    position: relative;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-shadow: 0 .5rem 2rem;
+}
+
+#toTop {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .7rem .5rem;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-decoration: none;
+}
+
+
+
+/*=============导航栏=============*/
+
+.navigation {
+    padding-top: .8rem;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,.2),0 .3rem 2rem rgba(0,0,0,.1);
+}
+
+/*下箭头*/
+.navbar-toggler {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    transition: transform: 1s ease;
+    transform-origin: center;
+}
+
+.navbar-toggler.collapsed {
+    transform: rotate(180deg);
+}
+
+.navbar-collapse {
+    overflow: hidden;
+    display: none;
+    transition: height 1s ease;
+}
+
+/*导航选项*/
+.nav-list li{
+    width: 80%;
+    border-radius: 5px;
+    display: block;
+    border-bottom: 2px;
+    margin: 0 0 .3rem 2rem;
+}
+
+.nav-list a{
+    color: #411;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    color: #8d7d51;
+    text-decoration: underline;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+@media screen and (min-width:768px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav-list{
+        text-align: center;
+    }
+
+    .nav-list li{
+        width: 15%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .navbar-collapse {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-header {
+        background-position:0 -75px; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-header {
+        background-position: 0 -230px;
+    }
+}
+
+/*============内容栏============*/
+
+.container {
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.section {
+    width: 95%;
+    margin: .5rem auto;
+    padding: .8rem 0;
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,.2),0 .3rem 2rem rgba(0,0,0,.1);
+}
+
+.section p{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.section strong{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#peopleNumber {
+    height: 3rem;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#numberSrc {
+    display: inline-block;
+    width: 2rem;
+    font-size: 1.5rem;
+}
+
+#cardNumber {
+    display: inline-block;
+    width: 2rem;
+    font-size: 1.5rem;
+}
+
+#charator img {
+    cursor: pointer;
+    margin: 4px auto;
+    opacity: 0.4;
+}
+
+#charator img.active{
+    opacity: 1;
+}
+
+#playerName div{
+    margin-bottom: .8rem ;
+    text-align: left;
+    display: none;
+}
+
+#playerName div.active{
+   display: inline-block;
+}
+
+#playerName label {
+    display: inline;
+}
+
+button {
+    margin: 5px 15px;
+}
+
+#gameStartBtn {
+    display: block;
+    margin: 10px auto;
+}

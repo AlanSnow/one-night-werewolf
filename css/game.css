@@ -84,6 +84,7 @@ body{
 
 .disabled {
     pointer-events: none;
+    opacity: 0.4;
 }
 
 .card.visable {
@@ -96,11 +97,15 @@ body{
 }
 
 .card.active img{
-    pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto !important;
     border: 3px solid #5e61df;
 }
 
-
+.card img.guard {
+    pointer-events: none !important;
+    opacity: 0.8;
+}
 
 /*确认菜单*/
 
@@ -113,9 +118,6 @@ body{
 }
 
 .fixed-btn button {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
     font-size: 1.5rem;
     margin: .5rem 2rem;
     border: .2rem solid rgba(0,0,0,.2);
@@ -156,9 +158,6 @@ body{
     }
 
 #next {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
     font-size: 2.5rem;
     line-height: 2rem;
     padding-bottom: .5rem;

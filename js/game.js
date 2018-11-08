@@ -445,7 +445,7 @@ $(document).ready(function(){
     //百度语音API自动播放
     function changeVoice(str){
         var zhText = encodeURI(encodeURI(str));
-        var voiceUrl = "https://tsn.baidu.com/text2audio?tex="+zhText + "&lan=zh&cuid=onenightwerewolf&ctp=1&tok=24.434b1837843ec61a495e7de28e2e0c3e.2592000.1539953490.282335-14240357"
+        var voiceUrl = "https://tsn.baidu.com/text2audio?tex="+zhText + "&lan=zh&cuid=onenightwerewolf&ctp=1&tok=24.66b9c218f5ba575a754ab36b4f92191b.2592000.1544245552.282335-14240357"
         $("#voiceAd").attr("src",voiceUrl);
         $("#voiceAd")[0].play();
     }
